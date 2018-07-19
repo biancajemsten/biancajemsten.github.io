@@ -1,0 +1,18 @@
+
+.introductioContainer{
+  padding: 4em;
+  color: black;
+  font-family: $font;
+  top: 20%;
+  // position: absolute;
+  animation: moveInTriangle 2s 1;
+}
+
+#introductionText{
+  font-size: 3em;
+}
+
+@keyframes moveInTriangle {
+  0% {top: 0px;}
+  100% {top: 100px;}
+}

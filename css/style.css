@@ -1,0 +1,39 @@
+.fullPage {
+  padding: 0 11em 0 2em;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.6; }
+
+.introductioContainer {
+  padding: 4em;
+  color: black;
+  font-family: "Domine", serif;
+  top: 20%;
+  animation: moveInTriangle 2s 1; }
+
+#introductionText {
+  font-size: 3em; }
+
+@keyframes moveInTriangle {
+  0% {
+    top: 0px; }
+  100% {
+    top: 100px; } }
+#triangle-topleft {
+  width: 0;
+  height: 0;
+  border-top: 100vh solid #c2d1f0;
+  border-right: 80vw solid transparent; }
+
+html {
+  border: 20px solid white;
+  background-color: #f4f7f6; }
+
+div.container {
+  position: absolute;
+  height: 100vh; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,14 @@
+@import './base/variables';
+@import './base/globalClasses';
+@import './components/introduction';
+@import './components/shapes';
+
+html{
+  border: 20px solid white;
+  background-color: $light;
+}
+
+div.container{
+  position: absolute;
+  height: 100vh;
+}
