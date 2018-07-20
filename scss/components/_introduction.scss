@@ -1,18 +1,81 @@
+$introTopHeight: 10rem;
+$introductionContainerWidth: 31rem;
+$introductionContainerHeight: 13rem;
+$introBottomHeight: 3rem;
+
 
 .introductioContainer{
-  padding: 4em;
   color: black;
   font-family: $font;
-  top: 20%;
-  // position: absolute;
-  animation: moveInTriangle 2s 1;
+  top: 20vh;
+  left: 40vw;
+  position: absolute;
+  width: $introductionContainerWidth;
+  height: $introductionContainerHeight;
+  .introTop{
+    position:absolute;
+    width: $introductionContainerWidth;
+    height: $introTopHeight;
+    span:first-child{
+      animation: slideInLeft 2s;
+      position: absolute;
+    }
+    span:nth-child(2){
+      position: absolute;
+      right:0;
+      animation: slideInRight 2s;
+    }
+    span{
+      p{
+        font-size: 4em;
+        display: inline-block;
+      }
+  }
+  }
+  hr{
+    position: absolute;
+    animation: drawLine 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    bottom: 0px;
+  }
+  .introBottom{
+    width:$introductionContainerWidth;
+    bottom: 0;
+    height: 3rem;
+    position: absolute;
+    overflow: hidden;
+    p{
+      width:$introductionContainerWidth;
+      position: absolute;
+      font-size: 2rem;
+      text-align:center;
+      margin:0;
+      overflow: hidden;
+      height:0;
+      animation: slideDown 1s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+    }
+  }
 }
 
-#introductionText{
-  font-size: 3em;
+
+@keyframes slideInLeft {
+  0%{transform: translate(-6em, 0);}
+  100%{transform: translate(0, 0);}
+}
+@keyframes slideInRight {
+  0%{transform: translate(6em, 0);}
+  100%{transform: translate(0, 0);}
 }
 
-@keyframes moveInTriangle {
-  0% {top: 0px;}
-  100% {top: 100px;}
+@keyframes drawLine {
+  0%{width:0px;}
+  100%{width:$introductionContainerWidth;}
+}
+
+@keyframes slideDown {
+  0%{height: 0px;}
+  100%{height: 37px;}
 }

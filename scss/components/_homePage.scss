@@ -1,0 +1,26 @@
+.homePage{
+  height: 100vh;
+  position: relative;
+  img{
+    height: 80vh;
+    position: absolute;
+    bottom: 0px;
+    left: 5vw;
+    animation: fadeIn 3s forwards;
+  }
+  i{
+    font-size: 3rem;
+    bottom: 10px;
+    left: 50vw;
+    position: absolute;
+    :before{
+      // height: 25px;
+      // width: 25px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}

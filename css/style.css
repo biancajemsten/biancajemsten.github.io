@@ -8,32 +8,102 @@
   line-height: 1.6; }
 
 .introductioContainer {
-  padding: 4em;
   color: black;
   font-family: "Domine", serif;
-  top: 20%;
-  animation: moveInTriangle 2s 1; }
+  top: 20vh;
+  left: 40vw;
+  position: absolute;
+  width: 31rem;
+  height: 13rem; }
+  .introductioContainer .introTop {
+    position: absolute;
+    width: 31rem;
+    height: 10rem; }
+    .introductioContainer .introTop span:first-child {
+      animation: slideInLeft 2s;
+      position: absolute; }
+    .introductioContainer .introTop span:nth-child(2) {
+      position: absolute;
+      right: 0;
+      animation: slideInRight 2s; }
+    .introductioContainer .introTop span p {
+      font-size: 4em;
+      display: inline-block; }
+  .introductioContainer hr {
+    position: absolute;
+    animation: drawLine 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    bottom: 0px; }
+  .introductioContainer .introBottom {
+    width: 31rem;
+    bottom: 0;
+    height: 3rem;
+    position: absolute;
+    overflow: hidden; }
+    .introductioContainer .introBottom p {
+      width: 31rem;
+      position: absolute;
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+      overflow: hidden;
+      height: 0;
+      animation: slideDown 1s;
+      animation-delay: 3s;
+      animation-fill-mode: forwards; }
 
-#introductionText {
-  font-size: 3em; }
-
-@keyframes moveInTriangle {
+@keyframes slideInLeft {
   0% {
-    top: 0px; }
+    transform: translate(-6em, 0); }
   100% {
-    top: 100px; } }
+    transform: translate(0, 0); } }
+@keyframes slideInRight {
+  0% {
+    transform: translate(6em, 0); }
+  100% {
+    transform: translate(0, 0); } }
+@keyframes drawLine {
+  0% {
+    width: 0px; }
+  100% {
+    width: 31rem; } }
+@keyframes slideDown {
+  0% {
+    height: 0px; }
+  100% {
+    height: 37px; } }
 #triangle-topleft {
   width: 0;
   height: 0;
   border-top: 100vh solid #c2d1f0;
   border-right: 80vw solid transparent; }
 
+.homePage {
+  height: 100vh;
+  position: relative; }
+  .homePage img {
+    height: 80vh;
+    position: absolute;
+    bottom: 0px;
+    left: 5vw;
+    animation: fadeIn 3s forwards; }
+  .homePage i {
+    font-size: 3rem;
+    bottom: 10px;
+    left: 50vw;
+    position: absolute; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 html {
-  border: 20px solid white;
   background-color: #f4f7f6; }
 
 div.container {
-  position: absolute;
-  height: 100vh; }
+  height: 100vh;
+  width: 90px; }
 
 /*# sourceMappingURL=style.css.map */

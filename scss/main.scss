@@ -2,13 +2,14 @@
 @import './base/globalClasses';
 @import './components/introduction';
 @import './components/shapes';
+@import './components/homePage';
 
 html{
-  border: 20px solid white;
   background-color: $light;
 }
 
 div.container{
-  position: absolute;
+  // position: absolute;
   height: 100vh;
+  width: 90px;
 }
