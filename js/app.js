@@ -3,6 +3,8 @@
 console.log('js running');
 
 $(()=>{
+  // const $navItems = querySelectorAll('li');
+
   // new TypeIt('#introductionText', {
   //   strings: 'Hey, I\'m Bianca',
   //   speed: 50,
@@ -11,6 +13,7 @@ $(()=>{
 
   // get this to work?
   $('.smooth').on('scroll', function() {
+    console.log('scroll');
     $.smoothScroll({
       scrollElement: $('body'),
       scrollTarget: '#' + this.id
@@ -19,20 +22,26 @@ $(()=>{
     return false;
   });
 
-  $('i').on('click', function(e){
+
+  $('i.fa-angle-down').on('click', function(e){
     if(this.hash !== ''){
-      console.log(this.hash); 
       e.preventDefault();
+      const link = $(this).attr('href');
 
-      const hash = this.hash;
-
-      $('html, body'.animate({
-        scrollTop: $(hash).offset().top
+      $('html, body').animate({
+        scrollTop: $(link).offset().top
       },800, function(){
-        window.location.hash = hash;
-      }));
+        window.location.id = link;
+      });
     }
   });
 
+
+  //theme changer
+  // for(let i = 0;i < $navItems.length; i++){
+  //   $navItems[i].addEventListener('hover', function(){
+  //     $navItems[i].addClass('')
+  //   });
+  // }
 
 });

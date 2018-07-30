@@ -3,13 +3,17 @@
 @import './components/introduction';
 @import './components/shapes';
 @import './components/homePage';
+@import './components/navbar';
 
 html{
   background-color: $light;
+  font-family: $font; 
 }
 
 div.container{
-  // position: absolute;
+  position: absolute;
   height: 100vh;
-  width: 90px;
+  width: 90vw;
+  right: 0;
+
 }
