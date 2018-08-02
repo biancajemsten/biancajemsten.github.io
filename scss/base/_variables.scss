@@ -1,8 +1,10 @@
 //COLORS
 $backgroundColor: #c2d1f0;
+$blue: #c2d1f0;
 $secondbackgorund: rgba(100,100,100,0.2);
-$light: #f4f7f6;
-$gradient: linear-gradient(-90deg, red, yellow);
+$light: #fff;
+$gradient: linear-gradient(90deg, $blue, $light);
+$grey: #f4f7f6;
 //fonts
 $font: 'Domine', serif;
 $cursive: 'Petit Formal Script', cursive;

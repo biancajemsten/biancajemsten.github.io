@@ -1,20 +1,42 @@
 div#nav{
-  width: 10vw;
+  width: 15vw;
   height: 100vh;
   position: fixed;
   display: flex;
   flex-direction: row;
   list-style: none;
+  background: $gradient;
+  top: 0;
+  left: 0;
   ul{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     list-style: none;
-    padding-left: 20px;
+    padding-left: 25px;
     height: 60%;
     li a{
       text-decoration: none;
-      color: inherit;
+      color: $light;
+      font-size: 1.2rem;
+      .navHover{
+        font-size: 1.5rem;
+      }
+      p{
+        display: inline;
+        padding-left: 5px;
+        color: $light;
+      }
     }
   }
+}
+
+//Currently not working
+.showNavItem{
+  animation: showNavItem 6s forwards;
+}
+
+@keyframes showNavItem {
+  0%{width: 0px;}
+  100%{width: min-content;}
 }

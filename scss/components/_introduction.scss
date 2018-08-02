@@ -8,7 +8,7 @@ $introBottomHeight: 3rem;
   color: black;
   font-family: $font;
   top: 20vh;
-  left: 40vw;
+  left: 30vw;
   position: absolute;
   width: $introductionContainerWidth;
   height: $introductionContainerHeight;
@@ -38,6 +38,7 @@ $introBottomHeight: 3rem;
     animation-delay: 1s;
     animation-fill-mode: forwards;
     bottom: 0px;
+    color: $backgroundColor;
   }
   .introBottom{
     width:$introductionContainerWidth;

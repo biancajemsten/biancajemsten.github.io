@@ -9,7 +9,7 @@
   color: black;
   font-family: "Domine", serif;
   top: 20vh;
-  left: 40vw;
+  left: 30vw;
   position: absolute;
   width: 31rem;
   height: 13rem; }
@@ -32,7 +32,8 @@
     animation: drawLine 1s;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-    bottom: 0px; }
+    bottom: 0px;
+    color: #c2d1f0; }
   .introductioContainer .introBottom {
     width: 31rem;
     bottom: 0;
@@ -84,7 +85,6 @@
     height: 80vh;
     position: absolute;
     bottom: 0px;
-    left: 5vw;
     animation: fadeIn 3s forwards; }
   .homePage i {
     font-size: 3rem;
@@ -98,31 +98,49 @@
   100% {
     opacity: 1; } }
 div#nav {
-  width: 10vw;
+  width: 15vw;
   height: 100vh;
   position: fixed;
   display: flex;
   flex-direction: row;
-  list-style: none; }
+  list-style: none;
+  background: linear-gradient(90deg, #c2d1f0, #fff);
+  top: 0;
+  left: 0; }
   div#nav ul {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     list-style: none;
-    padding-left: 20px;
+    padding-left: 25px;
     height: 60%; }
     div#nav ul li a {
       text-decoration: none;
-      color: inherit; }
+      color: #fff;
+      font-size: 1.2rem; }
+      div#nav ul li a .navHover {
+        font-size: 1.5rem; }
+      div#nav ul li a p {
+        display: inline;
+        padding-left: 5px;
+        color: #fff; }
 
+.showNavItem {
+  animation: showNavItem 6s forwards; }
+
+@keyframes showNavItem {
+  0% {
+    width: 0px; }
+  100% {
+    width: min-content; } }
 html {
-  background-color: #f4f7f6;
+  background-color: #fff;
   font-family: "Domine", serif; }
 
 div.container {
   position: absolute;
   height: 100vh;
-  width: 90vw;
+  width: 85vw;
   right: 0; }
 
 /*# sourceMappingURL=style.css.map */

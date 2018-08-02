@@ -3,13 +3,6 @@
 console.log('js running');
 
 $(()=>{
-  // const $navItems = querySelectorAll('li');
-
-  // new TypeIt('#introductionText', {
-  //   strings: 'Hey, I\'m Bianca',
-  //   speed: 50,
-  //   autoStart: true
-  // });
 
   // get this to work?
   $('.smooth').on('scroll', function() {
@@ -36,12 +29,37 @@ $(()=>{
     }
   });
 
+  $('li a').on('click', function(e){
+    if(this.hash !== ''){
+      e.preventDefault();
+      const link = $(this).attr('href');
 
-  //theme changer
+      $('html, body').animate({
+        scrollTop: $(link).offset().top
+      },800, function(){
+        window.location.id = link;
+      });
+    }
+  });
+
+
+  $('li a').mouseenter(function(){
+    $(this).children(':nth-child(2)').text(`${$(this).attr('name')}`);
+    $(this).children(':nth-child(2)').addClass('showNavItem');
+  });
+  $('li a').mouseleave(function(){
+    $(this).children(':nth-child(2)').text('');
+  });
+
+
   // for(let i = 0;i < $navItems.length; i++){
-  //   $navItems[i].addEventListener('hover', function(){
-  //     $navItems[i].addClass('')
+  //   $navItems[i].hover(function(){
+  //     console.log('hover')
   //   });
+  //   // $navItems[i].hover(function(){
+  //   //   console.log('hovered');
+  //   //   // $navItems[i].addClass('big');
+  //   // });
   // }
 
 });
