@@ -1,3 +1,12 @@
-.aboutBlurb{
-  width: 30vw; 
+#about{
+  .aboutBlurb{
+    width: 40vw;
+    margin-right: 5vw;
+    font-family: $text;
+    align-self: flex-end;
+  }
+  h2{
+    margin-right: 5vw;
+    text-align: right;
+  }
 }

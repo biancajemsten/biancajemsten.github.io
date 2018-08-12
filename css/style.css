@@ -1,9 +1,7 @@
 .fullPage {
-  height: 100vh;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  flex-direction: column; }
 
 .introductionContainer {
   color: black;
@@ -68,7 +66,8 @@
     height: 80vh;
     position: absolute;
     bottom: 0px;
-    animation: fadeIn 3s forwards; }
+    animation: fadeIn 3s forwards;
+    transition: all 1s; }
   .homePage i {
     font-size: 3rem;
     bottom: 10px;
@@ -80,8 +79,14 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
-.aboutBlurb {
-  width: 30vw; }
+#about .aboutBlurb {
+  width: 40vw;
+  margin-right: 5vw;
+  font-family: "Lato", sans-serif;
+  align-self: flex-end; }
+#about h2 {
+  margin-right: 5vw;
+  text-align: right; }
 
 div#nav {
   width: 15vw;
@@ -119,6 +124,48 @@ div#nav {
     width: 0px; }
   100% {
     width: min-content; } }
+#skills h2 {
+  text-align: left;
+  margin-right: 5vw; }
+#skills .iconContainer {
+  width: 50vw; }
+  #skills .iconContainer li {
+    list-style: none;
+    font-size: 50px;
+    display: inline-block;
+    margin: 10px; }
+    #skills .iconContainer li img {
+      width: 50px;
+      display: inline-block;
+      vertical-align: center; }
+
+#education h2 {
+  text-align: right;
+  margin-right: 5vw; }
+#education .educationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 0 auto; }
+  #education .educationContainer div {
+    padding: 10px; }
+    #education .educationContainer div h6 {
+      font-size: 1.2rem;
+      margin: 1rem 0 1rem 0;
+      overflow-wrap: break-word; }
+    #education .educationContainer div p {
+      font-family: "Lato", sans-serif; }
+      #education .educationContainer div p:first-of-type {
+        font-style: oblique; }
+      #education .educationContainer div p span {
+        font-style: italic; }
+  #education .educationContainer .divider {
+    background-color: #c2d1f0;
+    width: 2px;
+    padding: 0px;
+    margin: 0 2px 0 2px; }
+
 html {
   background-color: #fff;
   font-family: "Playfair Display", serif; }

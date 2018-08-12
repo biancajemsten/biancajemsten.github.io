@@ -1,0 +1,36 @@
+#education{
+  h2{
+    text-align: right;
+    margin-right: 5vw;
+  }
+  .educationContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 auto;
+    div{
+      padding: 10px;
+      h6{
+        font-size: 1.2rem;
+        margin: 1rem 0 1rem 0;
+        overflow-wrap: break-word;
+      }
+      p{
+        font-family: $text;
+        &:first-of-type{
+          font-style: oblique;
+        }
+        span{
+          font-style:italic;
+        }
+      }
+    }
+    .divider{
+      background-color: $backgroundColor;
+      width: 2px;
+      padding: 0px;
+      margin: 0 2px 0 2px;
+    }
+  }
+}

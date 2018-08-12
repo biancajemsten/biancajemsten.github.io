@@ -4,9 +4,10 @@
   img{
     height: 80vh;
     position: absolute;
-    bottom: 0px;
+    bottom: 0px; 
     // left: 5vw;
     animation: fadeIn 3s forwards;
+    transition: all 1s;
   }
   i{
     font-size: 3rem;

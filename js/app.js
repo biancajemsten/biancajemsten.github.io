@@ -1,20 +1,36 @@
-/*global TypeIt*/
-
 console.log('js running');
 
 $(()=>{
 
-  // get this to work?
-  $('.smooth').on('scroll', function() {
-    console.log('scroll');
-    $.smoothScroll({
-      scrollElement: $('body'),
-      scrollTarget: '#' + this.id
-    });
+  const profilePicture = $('#profilePicture');
+  let aboutBlurb = $('.aboutBlurb');
 
-    return false;
+  $(this).on('scroll', function(){
+    let scrollbarLocation = $(this).scrollTop();
+    if(scrollbarLocation > 120){
+      aboutBlurb = $('.aboutBlurb');
+      const blurbHeight = aboutBlurb.height() + $('h2').height();
+      $(window).on('resize', function(){
+        console.log($('h2').height());
+        console.log(blurbHeight);
+        profilePicture.css({
+          'height': `${aboutBlurb.height()}px`,
+          'bottom': `-${blurbHeight}px`
+        });
+      });
+      profilePicture.css({
+        'height': `${aboutBlurb.height()}px`,
+        'bottom': `-${blurbHeight}px`,
+        'left': '5vw'
+      });
+    } else {
+      profilePicture.css({
+        'height': '80vh',
+        'bottom': '0px',
+        'left': '0'
+      });
+    }
   });
-
 
   $('i.fa-angle-down').on('click', function(e){
     if(this.hash !== ''){
@@ -50,16 +66,5 @@ $(()=>{
   $('li a').mouseleave(function(){
     $(this).children(':nth-child(2)').text('');
   });
-
-
-  // for(let i = 0;i < $navItems.length; i++){
-  //   $navItems[i].hover(function(){
-  //     console.log('hover')
-  //   });
-  //   // $navItems[i].hover(function(){
-  //   //   console.log('hovered');
-  //   //   // $navItems[i].addClass('big');
-  //   // });
-  // }
 
 });
