@@ -1,0 +1,29 @@
+.experienceContainer{
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  div{
+    padding: 10px; 
+    &.blueBackground{
+      background-color: $backgroundColor;
+      border-radius: 10px;
+    }
+    width: 35vw;
+    h6{
+      font-size: 1.2rem;
+      margin: 1rem 0 1rem 0;
+      overflow-wrap: break-word;
+    }
+    p{
+      font-family: $text;
+      overflow-wrap: break-word;
+    }
+    ul{
+      li{
+        font-family: $text;
+      }
+    }
+  }
+}
