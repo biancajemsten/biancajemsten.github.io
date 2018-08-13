@@ -2,10 +2,27 @@ console.log('js running');
 
 $(()=>{
   const $profilePicture = $('#profilePicture');
-  let $aboutBlurb = $('.aboutBlurb');
+  const $aboutBlurb = $('.aboutBlurb');
   const $logo = $('.logo');
   const $experienceTitles = $('.experienceTable h6');
-  const $experienceDetails = $('.experienceDetails');
+  const $panels = $('.panel');
+
+  function toggleOpen() {
+    $panels.removeClass('open');
+    this.classList.toggle('open');
+  }
+
+  function toggleActive() {
+    this.classList.toggle('open-active');
+  }
+
+  $panels.each(function() {
+    $(this).on('click', toggleOpen);
+  });
+
+  $panels.each(function() {
+    $(this).on('transitionend', toggleActive);
+  });
 
   function experienceSelection(){
     $experienceTitles.each(function() {
@@ -13,7 +30,7 @@ $(()=>{
         $experienceTitles.removeClass('active');
         $(this).addClass('active');
         $('.experienceDetail').css('display', 'none');
-        let id = $(this).attr('name');
+        const id = $(this).attr('name');
         $(`#${id}`).css('display','block');
       });
     });
