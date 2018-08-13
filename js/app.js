@@ -1,33 +1,61 @@
 console.log('js running');
 
 $(()=>{
+  const $profilePicture = $('#profilePicture');
+  let $aboutBlurb = $('.aboutBlurb');
+  const $logo = $('.logo');
+  const $experienceTitles = $('.experienceTable h6');
+  const $experienceDetails = $('.experienceDetails');
 
-  const profilePicture = $('#profilePicture');
-  let aboutBlurb = $('.aboutBlurb');
+  function experienceSelection(){
+    $experienceTitles.each(function() {
+      $(this).on('click', () => {
+        $experienceTitles.removeClass('active');
+        $(this).addClass('active');
+        $('.experienceDetail').css('display', 'none');
+        let id = $(this).attr('name');
+        $(`#${id}`).css('display','block');
+      });
+    });
+  }
+
+  experienceSelection();
 
   $(this).on('scroll', function(){
     let scrollbarLocation = $(this).scrollTop();
     if(scrollbarLocation > 120){
-      aboutBlurb = $('.aboutBlurb');
-      const blurbHeight = aboutBlurb.height() + $('h2').height();
+      const $blurbHeight = $aboutBlurb.height() + $('h2').height();
       $(window).on('resize', function(){
-        console.log($('h2').height());
-        console.log(blurbHeight);
-        profilePicture.css({
-          'height': `${aboutBlurb.height()}px`,
-          'bottom': `-${blurbHeight}px`
+        $profilePicture.css({
+          'height': `${$blurbHeight}px`,
+          'bottom': `-${$blurbHeight}px`
         });
       });
-      profilePicture.css({
-        'height': `${aboutBlurb.height()}px`,
-        'bottom': `-${blurbHeight}px`,
+      $profilePicture.css({
+        'height': `${$blurbHeight}px`,
+        'bottom': `-${$blurbHeight}px`,
         'left': '5vw'
       });
     } else {
-      profilePicture.css({
+      $profilePicture.css({
         'height': '80vh',
         'bottom': '0px',
         'left': '0'
+      });
+    }
+    let contactLocation = $('#contact').offset().top - ($('#contact').height()/4);
+
+    if(scrollbarLocation > contactLocation){
+      $logo.css({
+        'height': '40vh',
+        'left': '15vw',
+        'bottom': '30vh'
+      });
+    }else{
+      $logo.css({
+        'height': '10vh',
+        'left': '10px',
+        'bottom': '10vh'
       });
     }
   });
@@ -66,5 +94,7 @@ $(()=>{
   $('li a').mouseleave(function(){
     $(this).children(':nth-child(2)').text('');
   });
+
+
 
 });

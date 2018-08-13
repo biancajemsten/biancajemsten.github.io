@@ -29,6 +29,13 @@ div#nav{
       }
     }
   }
+  img{
+    height: 10vh;
+    position: absolute;
+    margin-left: 10px;
+    bottom: 10vh;
+    transition: 1s all; 
+  }
 }
 
 //Currently not working
