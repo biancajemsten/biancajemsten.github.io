@@ -187,6 +187,7 @@ div#nav {
     width: 25vw;
     margin-right: 5vw; }
     .experienceContainer .experienceTable h6 {
+      box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
       border: 3px solid #c2d1f0;
       padding: 10px;
       font-size: 1.2rem;
@@ -252,18 +253,37 @@ div#nav {
     justify-content: center;
     align-items: center;
     transition: flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11); }
+    #portfolio .portfolioPanels .panel:hover {
+      border: 2px outset rgba(255, 255, 255, 0.2); }
+    #portfolio .portfolioPanels .panel h3 {
+      margin: auto;
+      position: absolute; }
     #portfolio .portfolioPanels .panel img {
       width: 100%; }
     #portfolio .portfolioPanels .panel .projectInfo {
       font-family: "Lato", sans-serif;
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      flex-wrap: wrap; }
+      #portfolio .portfolioPanels .panel .projectInfo .projectSummary {
+        width: 100%;
+        text-align: center; }
       #portfolio .portfolioPanels .panel .projectInfo .textContainer {
-        width: 60%; }
+        width: 55%; }
+        #portfolio .portfolioPanels .panel .projectInfo .textContainer .linkContainer {
+          display: flex;
+          justify-content: space-around; }
+          #portfolio .portfolioPanels .panel .projectInfo .textContainer .linkContainer a {
+            background-color: white;
+            text-decoration: none;
+            color: #000;
+            padding: 5px; }
       #portfolio .portfolioPanels .panel .projectInfo .imageContainer {
-        width: 40%;
+        width: 45%;
         display: flex;
-        align-items: center; }
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box; }
   #portfolio .portfolioPanels .panel1 {
     background-color: #354351;
     color: white; }
@@ -273,10 +293,18 @@ div#nav {
     background-color: #c2d1f0; }
   #portfolio .portfolioPanels .panel4 {
     background-color: #F8F8F8; }
+    #portfolio .portfolioPanels .panel4 a {
+      background-color: #c2d1f0;
+      text-decoration: none;
+      color: #000;
+      padding: 5px; }
   #portfolio .portfolioPanels .open {
-    flex: 5; }
+    flex: 6; }
   #portfolio .portfolioPanels .panel.open-active > *:nth-child(2) {
     transform: translateX(0); }
+  #portfolio .portfolioPanels .panel.open-active h3 {
+    margin: 0 auto;
+    position: relative; }
 
 html {
   background-color: #fff;
