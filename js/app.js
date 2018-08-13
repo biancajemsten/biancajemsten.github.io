@@ -7,9 +7,10 @@ $(()=>{
   const $experienceTitles = $('.experienceTable h6');
   const $panels = $('.panel');
 
+  console.log($panels);
+
   function toggleOpen() {
-    $panels.removeClass('open');
-    this.classList.toggle('open');
+    this.classList.contains('open') ? this.classList.remove('open') :  $panels.removeClass('open') && this.classList.add('open');
   }
 
   function toggleActive() {
