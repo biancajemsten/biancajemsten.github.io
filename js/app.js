@@ -7,8 +7,7 @@ $(()=>{
   const $experienceTitles = $('.experienceTable h6');
   const $panels = $('.panel');
 
-  console.log($panels);
-
+  //Portfolio functions
   function toggleOpen() {
     this.classList.contains('open') ? this.classList.remove('open') :  $panels.removeClass('open') && this.classList.add('open');
   }
@@ -25,6 +24,7 @@ $(()=>{
     $(this).on('transitionend', toggleActive);
   });
 
+  //experience functions
   function experienceSelection(){
     $experienceTitles.each(function() {
       $(this).on('click', () => {
@@ -38,20 +38,29 @@ $(()=>{
   }
 
   experienceSelection();
+  console.log($('h2').offset().top);
+  console.log($aboutBlurb.offset().top + $aboutBlurb.height());
 
+
+  let $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height())- ($('h2').offset().top);
+
+  console.log({$aboutPageHeight});
+
+  //homePage functions
   $(this).on('scroll', function(){
     let scrollbarLocation = $(this).scrollTop();
     if(scrollbarLocation > 120){
-      const $blurbHeight = $aboutBlurb.height() + $('h2').height();
+      const $blurbHeight = $aboutBlurb.outerHeight() + $('h2').outerHeight();
       $(window).on('resize', function(){
+        $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height())- ($('h2').offset().top);
         $profilePicture.css({
-          'height': `${$blurbHeight}px`,
-          'bottom': `-${$blurbHeight}px`
+          'height': `${$aboutBlurb.height()}px`,
+          'bottom': `-${$aboutPageHeight}px`
         });
       });
       $profilePicture.css({
-        'height': `${$blurbHeight}px`,
-        'bottom': `-${$blurbHeight}px`,
+        'height': `${$aboutBlurb.height()}px`,
+        'bottom': `-${$aboutPageHeight}px`,
         'left': '5vw'
       });
     } else {

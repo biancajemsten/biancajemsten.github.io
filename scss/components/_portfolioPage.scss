@@ -2,13 +2,14 @@
   h2{
     text-align: right;
     margin-right: 5vw;
+    margin-top: 1.4rem;
   }
   .portfolioPanels{
     display: flex;
     flex-wrap: wrap;
     max-width: 75vw;
     margin: 0 auto;
-    height: 90vh;
+    height: 87vh;
     overflow: hidden;
     flex-direction: column;
     .panel > *:nth-child(2){
@@ -23,10 +24,28 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border-top: 2px solid $light;
+      background: -moz-linear-gradient(left, #ffffff 0%, #c2d1f0 43%, #c2d1f0 58%, #ffffff 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #ffffff 0%,#c2d1f0 43%,#c2d1f0 58%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #ffffff 0%,#c2d1f0 43%,#c2d1f0 58%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+      color: #000;
+      &:last-of-type{
+        border-bottom: 2px solid $blue;
+      }
+      &:first-of-type{
+        border-top: 2px solid $blue;
+      }
       transition:
         flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11);
       &:hover{
-        border: 2px outset rgba(255,255,255,0.2);
+        // transition: all 1s;
+        background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 43%, #ffffff 58%, #ffffff 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #ffffff 0%,#ffffff 43%,#ffffff 58%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #ffffff 0%,#ffffff 43%,#ffffff 58%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        color: #000;
+        cursor: pointer;
+        // border: 2px outset rgba(255,255,255,0.2);
       }
       h3{
         margin: auto;
@@ -67,17 +86,17 @@
       }
     }
     .panel1{
-      background-color: #354351;
-      color: white;
+      // background-color: #354351;
+      // color: white;
     }
     .panel2{
-      background-color: #8FC1E3;
+      // background-color: #8FC1E3;
     }
     .panel3{
-      background-color: $blue;
+      // background-color: $blue;
     }
     .panel4{
-      background-color: #F8F8F8;
+      // background-color: #F8F8F8;
       a{
         background-color: $blue;
         text-decoration: none;
@@ -96,6 +115,10 @@
         margin: 0 auto;
         position: relative;
       }
+      color: #000;
+      background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 43%, #ffffff 58%, #ffffff 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #ffffff 0%,#ffffff 43%,#ffffff 58%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #ffffff 0%,#ffffff 43%,#ffffff 58%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     }
   }
 }
