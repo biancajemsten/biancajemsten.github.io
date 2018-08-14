@@ -301,14 +301,15 @@ div#nav {
       flex-wrap: wrap; }
       #portfolio .portfolioPanels .panel .projectInfo .projectSummary {
         width: 100%;
-        text-align: center; }
+        text-align: center;
+        margin-bottom: 0; }
       #portfolio .portfolioPanels .panel .projectInfo .textContainer {
         width: 55%; }
         #portfolio .portfolioPanels .panel .projectInfo .textContainer .linkContainer {
           display: flex;
           justify-content: space-around; }
           #portfolio .portfolioPanels .panel .projectInfo .textContainer .linkContainer a {
-            background-color: white;
+            background-color: #c2d1f0;
             text-decoration: none;
             color: #000;
             padding: 5px; }
