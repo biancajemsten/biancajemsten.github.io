@@ -6,221 +6,188 @@
 
 
   // Variables
-$bg-body: #f9f9f9;
-
-$primary-color: $blue;
-$secondary-color: $blue;
+  $primary-color: $blue;
+  $secondary-color: $blue;
 
 
-// Typography
-$base-font: helvetica, arial, tahoma, verdana;
-$base-font-title: "Dosis", arial, tahoma, verdana;
+  // Typography
+  $base-font: helvetica, arial, tahoma, verdana;
+  $base-font-title: "Dosis", arial, tahoma, verdana;
 
-$base-font-color: #726f77;
+  $base-font-color: #726f77;
 
-// Timeline
-$timeline-color: $primary-color;
+  // Timeline
+  $timeline-color: $primary-color;
 
 
-// Mixins and Placeholders
-%clearfix {
+  // Mixins and Placeholders
+  %clearfix {
     &:after, &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        clear: both;
+      content: '';
+      display: block;
+      width: 100%;
+      clear: both;
     }
-}
+  }
 
-@mixin prefix($prop, $val) {
+  @mixin prefix($prop, $val) {
     @each $prefix in '-webkit-', '-moz-', '-ms-', '' {
-        #{$prefix}#{$prop}: $val;
+      #{$prefix}#{$prop}: $val;
     }
-}
-*, *:before, *:after {
+  }
+  *, *:before, *:after {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-}
+  }
 
 
-// img {max-width: 100%;}
+  // img {max-width: 100%;}
 
-a {
+  a {
     text-decoration: none;
-}
+  }
 
-.educationContainer {
+  .educationContainer {
     max-width: 1100px;
     margin: 0 auto;
-}
+  }
 
 
-.project-name {
-  text-align: center;
-  padding: 10px 0;
-}
+  .project-name {
+    text-align: center;
+    padding: 10px 0;
+  }
 
-// Timeline
-#timeline {
+  // Timeline
+  #timeline {
     width: 100%;
-  margin: 30px auto;
+    margin: 30px auto;
     position: relative;
-  padding: 0 10px;
+    padding: 0 10px;
     @include prefix(transition, all .4s ease);
 
     &:before {
-        content:"";
-        width: 3px;
-        height: 100%;
-        background: $timeline-color;
-        left: 50%;
-        top: 0;
-        position: absolute;
+      content:"";
+      width: 3px;
+      height: 100%;
+      background: $timeline-color;
+      left: 50%;
+      top: 0;
+      position: absolute;
     }
 
     &:after {
-        content: "";
-        clear: both;
-        display: table;
-        width: 100%;
+      content: "";
+      clear: both;
+      display: table;
+      width: 100%;
     }
 
     .timeline-item {
-        margin-bottom: 50px;
-        position: relative;
-        @extend %clearfix;
+      margin-bottom: 50px;
+      position: relative;
+      @extend %clearfix;
+      p{
+        font-family: $text;
+      }
+
+      .timeline-icon {
+        background: $timeline-color;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        overflow: hidden;
+        margin-left: -23px;
+        @include prefix(border-radius, 50%);
+
+        svg {
+          position: relative;
+          top: 14px;
+          left: 14px;
+        }
+        img{
+          position: relative;
+          top: 12px;
+          left: 12px;
+          height: 25px;
+          width: 25px;
+        }
+      }
+
+      .timeline-content {
+        width: 45%;
+        background: #fff;
+        padding: 20px;
+        @include prefix(box-shadow, 0 3px 0 rgba(0,0,0,0.1));
+        @include prefix(border-radius, 5px);
+        @include prefix(transition, all .3s ease);
+
+        h3 {
+          padding: 15px;
+          background: $timeline-color;
+          color: #fff;
+          margin: -20px -20px 0 -20px;
+          font-weight: 300;
+          @include prefix(border-radius, 3px 3px 0 0);
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 45%;
+          top: 20px;
+          width: 0;
+          height: 0;
+          border-top: 7px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-left:7px solid $timeline-color;
+        }
+
+        &.right {
+          float: right;
+
+          &:before {
+            content: '';
+            right: 45%;
+            left: inherit;
+            border-left: 0;
+            border-right: 7px solid $timeline-color;
+          }
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    #timeline {
+      margin: 30px;
+      padding: 0px;
+      width: 90%;
+      &:before {
+        left: 0;
+      }
+
+      .timeline-item {
+        .timeline-content {
+          width: 90%;
+          float: right;
+
+          &:before, &.right:before {
+            left: 10%;
+            margin-left: -6px;
+            border-left: 0;
+            border-right: 7px solid $timeline-color;
+          }
+        }
 
         .timeline-icon {
-            background: $timeline-color;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            overflow: hidden;
-            margin-left: -23px;
-            @include prefix(border-radius, 50%);
-
-            svg {
-                position: relative;
-                top: 14px;
-                left: 14px;
-            }
-            img{
-              position: relative;
-              top: 12px;
-              left: 12px;
-              height: 25px;
-              width: 25px;
-            }
+          left: 0;
         }
-
-        .timeline-content {
-            width: 45%;
-            background: #fff;
-            padding: 20px;
-            @include prefix(box-shadow, 0 3px 0 rgba(0,0,0,0.1));
-            @include prefix(border-radius, 5px);
-            @include prefix(transition, all .3s ease);
-
-            h3 {
-                padding: 15px;
-                background: $timeline-color;
-                color: #fff;
-                margin: -20px -20px 0 -20px;
-                font-weight: 300;
-                @include prefix(border-radius, 3px 3px 0 0);
-            }
-
-            &:before {
-                content: '';
-                position: absolute;
-                left: 45%;
-                top: 20px;
-                width: 0;
-                height: 0;
-                border-top: 7px solid transparent;
-                border-bottom: 7px solid transparent;
-                border-left:7px solid $timeline-color;
-            }
-
-            &.right {
-                float: right;
-
-                &:before {
-                    content: '';
-                    right: 45%;
-                    left: inherit;
-                    border-left: 0;
-                    border-right: 7px solid $timeline-color;
-                }
-            }
-        }
+      }
     }
+  }
 }
-
-
-@media screen and (max-width: 768px) {
-    #timeline {
-        margin: 30px;
-        padding: 0px;
-    width: 90%;
-        &:before {
-            left: 0;
-        }
-
-        .timeline-item {
-            .timeline-content {
-                width: 90%;
-                float: right;
-
-                &:before, &.right:before {
-                    left: 10%;
-                    margin-left: -6px;
-                    border-left: 0;
-                    border-right: 7px solid $timeline-color;
-                }
-            }
-
-            .timeline-icon {
-                left: 0;
-            }
-        }
-    }
-}
-VIEW COMPILED  VIEW RESOURCES
-
-
-
-//   .educationContainer{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     width: 80vw;
-//     margin: 0 auto;
-//     div{
-//       padding: 10px;
-//       h6{
-//         font-size: 1.2rem;
-//         margin: 1rem 0 1rem 0;
-//         overflow-wrap: break-word;
-//       }
-//       p{
-//         font-family: $text;
-//         &:first-of-type{
-//           font-style: italic;
-//         }
-//         span{
-//           font-style:italic;
-//         }
-//       }
-//     }
-//     .divider{
-//       background-color: $backgroundColor;
-//       width: 2px;
-//       padding: 0px;
-//       margin: 0 2px 0 2px;
-//     }
-//   }
-{}}

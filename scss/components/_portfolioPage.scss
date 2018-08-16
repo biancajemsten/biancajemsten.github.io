@@ -4,6 +4,13 @@
     margin-right: 5vw;
     margin-top: 1.4rem;
   }
+  .projectBlurb{
+    width: 75vw;
+    align-self: center;
+    font-family: $text;
+    display: flex;
+    justify-content: space-around;
+  }
   .portfolioPanels{
     display: flex;
     flex-wrap: wrap;
@@ -54,6 +61,9 @@
       }
       img{
         width: 100%;
+        #portraitForm{
+          width: 80%;
+        }
       }
       .projectInfo{
         font-family: $text;

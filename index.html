@@ -17,7 +17,7 @@
          <li><a name="Home" href="#homePage"><i class="fas fa-home"></i><p></p></a></li>
          <li><a name="About" href="#about"><i class="fas fa-id-card"></i><p></p></a></li>
          <li><a name="Skills"href="#skills"><i class="fas fa-laptop"></i><p></p></a></li>
-         <li><a name="Portfolio"href="#portfolio"><i class="fas fa-briefcase"></i><p></p></a></li>
+         <li><a name="Projects"href="#portfolio"><i class="fas fa-briefcase"></i><p></p></a></li>
          <li><a name="Experience"href="#experience"><i class="far fa-list-alt"></i><p></p></a></li>
          <li><a name="Education"href="#education"><i class="fas fa-graduation-cap"></i><p></p></a></li>
          <li><a name="Contact" href="#contact"><i class="fas fa-envelope"></i><p></p></a></li>
@@ -89,7 +89,11 @@
      </section>
    <hr/>
      <section id="portfolio" class="fullPage">
-       <h2>PORTFOLIO</h2>
+       <h2>PROJECTS</h2>
+       <div class="projectBlurb">
+         <p>During my time at General Assembly I got the chance to work on four different projects which are summarized below. Even though there are things I could improve about each project I have chosen not to - in order to show my progress over time. </p>
+         <p>In my free time I also like to deepen my understanding about code and the industry by attending Meetups, listening to podcasts, completing Exercism exercises, and researching new frameworks. </p>
+       </div>
        <div class="portfolioPanels">
          <div class="panel panel1">
            <h3>CheckIt</h3>
@@ -148,9 +152,9 @@
          <div class="panel panel4">
            <h3>Hooops</h3>
            <div class="projectInfo">
-             <p class="projectSummary">WDI Project 2| Express full stack app | 7 days | Group Project </p>
+             <p class="projectSummary">WDI Project 1| JavaScript Game | 7 days | Individual Project </p>
              <div class="imageContainer">
-               <img src="images/hooops.gif"/>
+               <img id="portraitForm" src="images/hooops.gif"/>
              </div>
              <div class="textContainer">
                <p>Hooops is an in-browser JavaScript game inspired by Flappy Bird. Instead of going between pipes however, the character (which can be chosen by the user) goes through hoops! After extensive initial planning of the game, a simple MVP was built first and then more complex features added with testing. The game is fully mobile responsive and uses the local storage of the device to save high scores.</p>
@@ -178,9 +182,10 @@
          <div class="experienceDetails">
            <div class="experienceDetail" id="GA">
              <h6>
-               General Assembly, London, England
+               General Assembly
              </h6>
              <p>April 2018 - July 2018</p>
+             <h6>London, England</h6>
              <p class="position">Web Development Immserive Student</p>
              <p>General Assembly’s Web Development Immersive course is a 12-week intensive course teaching programming and web development. The course encompasses 480 hours of lessons taught by industry professionals , 400+ hours of homework, pair-programming, MEAN & MERN stack projects, as well as daily stand-ups. </p>
            </div>
@@ -214,9 +219,10 @@
            </div>
            <div class="experienceDetail" id="SSE">
              <h6>
-               SSE Capital, New York, N.Y., U.S.A.
+               SSE Capital
              </h6>
              <p>May 2015 - July 2016</p>
+             <h6>New York, N.Y., U.S.A.</h6>
              <p class="position">Analyst Intern</p>
              <ul>
                <li>Calculated financial ratios, evaluated organizational performance, and compared figures to industry standards</li>
@@ -236,63 +242,40 @@
            <div class="timeline-item">
              <div class="timeline-icon">
                <img src="images/GALogo.png"/>
+             </div>
+             <div class="timeline-content">
+               <h3>General Assembly, London, England</h3>
+               <p>April 2018 - July 2018</p>
+               <p>Web Development Immersive</p>
+             </div>
            </div>
-           <div class="timeline-content">
-             <h3>General Assembly, London, England</h3>
-             <p>April 2018 - July 2018</p>
-             <p>Web Development Immersive</p>
+
+           <div class="timeline-item">
+             <div class="timeline-icon">
+
+               <img src="images/YonseiLogo.png"/>
+             </div>
+             <div class="timeline-content right">
+               <h3>Yonsei University, Seoul, South Korea</h3>
+               <p>August 2015 – December 2015</p>
+               <p>Semester abroad from Georgetown University</p>
+             </div>
            </div>
-         </div>
 
-         <div class="timeline-item">
-           <div class="timeline-icon">
+           <div class="timeline-item">
+             <div class="timeline-icon">
+               <img src="images/GULogo.png"/>
 
-             <img src="images/YonseiLogo.png"/>
-         </div>
-         <div class="timeline-content right">
-           <h3>Yonsei University, Seoul, South Korea</h3>
-           <p>August 2015 – December 2015</p>
-           <p>Semester abroad from Georgetown University</p>
-         </div>
-       </div>
-
-       <div class="timeline-item">
-         <div class="timeline-icon">
-           <img src="images/GULogo.png"/>
-
-       </div>
-       <div class="timeline-content">
-         <h3>Georgetown University,
-           McDonough School of Business, Washington, D.C., U.S.A.</h3>
-           <p>August 2013 - May 2017</p>
-           <p>Bachelor of Science in Business    Administration</p>
-           <p>Double Major in Finance & International Political Economy and Business</p>
-       </div>
-     </div>
-   </div>
-       <!-- <div class="educationContainer">
-         <div id="GA-experience">
-           <h6>General Assembly, London, England</h6>
-           <p>April 2018 - July 2018</p>
-           <p>Web Development Immersive</p>
-         </div>
-         <div class="divider"></div>
-         <div>
-           <h6>Georgetown University,
-             McDonough School of Business, Washington, D.C., U.S.A.
-           </h6>
-           <p>August 2013 - May 2017</p>
-           <p>Bachelor of Science in Business    Administration</p>
-           <p><span>Double Major:</span> Finance & International Political Economy and Business</p>
-           <p><span>Cumulative GPA:</span> 3.6/4.0</p>
-         </div>
-         <div class="divider"></div>
-         <div>
-           <h6>Yonsei University, Seoul, South Korea </h6>
-           <p>August 2015 – December 2015</p>
-           <p>Semester abroad from Georgetown University</p>
-         </div>
-       </div> -->
+             </div>
+             <div class="timeline-content">
+               <h3>Georgetown University,
+                 McDonough School of Business, Washington, D.C., U.S.A.</h3>
+                 <p>August 2013 - May 2017</p>
+                 <p>Bachelor of Science in Business    Administration</p>
+                 <p>Double Major in Finance & International Political Economy and Business</p>
+               </div>
+             </div>
+           </div>
      </section>
      <hr/>
      <section id="contact" class="fullPage">
