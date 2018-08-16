@@ -481,6 +481,9 @@ div#nav {
     text-decoration: none;
     color: #000;
     padding: 5px; }
+  #portfolio .portfolioPanels .panel4 img {
+    width: 70%;
+    margin: 0 auto; }
   #portfolio .portfolioPanels .open {
     flex: 6; }
   #portfolio .portfolioPanels .panel.open-active > *:nth-child(2) {
