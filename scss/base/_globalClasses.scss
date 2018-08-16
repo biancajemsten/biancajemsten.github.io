@@ -7,5 +7,24 @@
 }
 
 h2{
-  margin-top: 2rem;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+section{
+  margin: 75px 0;
+  &:first-of-type{
+    margin: 0 0 75px 0;
+  }
+  &:last-of-type{
+    margin: 10px 0 10px 0;
+  }
+}
+hr{
+  width: 80vw;
+  &:last-of-type{
+    background-color:$blue;
+    height: 3px;
+    border-style: none;
+  }
 }

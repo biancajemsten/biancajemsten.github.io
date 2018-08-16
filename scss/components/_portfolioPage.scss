@@ -25,6 +25,7 @@
       justify-content: center;
       align-items: center;
       border-top: 2px solid $light;
+      // background-color: $blue;
       background: -moz-linear-gradient(left, #ffffff 0%, #c2d1f0 43%, #c2d1f0 58%, #ffffff 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(left, #ffffff 0%,#c2d1f0 43%,#c2d1f0 58%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
       background: linear-gradient(to right, #ffffff 0%,#c2d1f0 43%,#c2d1f0 58%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -48,6 +49,7 @@
         // border: 2px outset rgba(255,255,255,0.2);
       }
       h3{
+        font-size: 1.5em;
         margin: auto;
         position: absolute;
       }
@@ -113,6 +115,7 @@
     }
     .panel.open-active {
       h3{
+        font-size: 1.17em;
         margin: 0 auto;
         position: relative;
       }

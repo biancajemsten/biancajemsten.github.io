@@ -42,7 +42,7 @@ $(()=>{
   console.log($aboutBlurb.offset().top + $aboutBlurb.height());
 
 
-  let $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height())- ($('h2').offset().top);
+  let $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height() + 75)- ($('h2').offset().top);
 
   console.log({$aboutPageHeight});
 
@@ -52,7 +52,7 @@ $(()=>{
     if(scrollbarLocation > 120){
       const $blurbHeight = $aboutBlurb.outerHeight() + $('h2').outerHeight();
       $(window).on('resize', function(){
-        $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height())- ($('h2').offset().top);
+        $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height() + 75)- ($('h2').offset().top);
         $profilePicture.css({
           'height': `${$aboutBlurb.height()}px`,
           'bottom': `-${$aboutPageHeight}px`
@@ -76,7 +76,7 @@ $(()=>{
       $logo.css({
         'height': '40vh',
         'left': '15vw',
-        'bottom': '30vh'
+        'bottom': '25vh'
       });
     }else{
       $logo.css({
@@ -113,7 +113,6 @@ $(()=>{
     }
   });
 
-
   $('li a').mouseenter(function(){
     $(this).children(':nth-child(2)').text(`${$(this).attr('name')}`);
     $(this).children(':nth-child(2)').addClass('showNavItem');
@@ -121,7 +120,5 @@ $(()=>{
   $('li a').mouseleave(function(){
     $(this).children(':nth-child(2)').text('');
   });
-
-
 
 });

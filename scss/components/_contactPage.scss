@@ -1,7 +1,43 @@
 #contact{
-  height: 100vh;
-  img{
-    height: 30vw;
-    width: auto;
+  h2{
+    margin-left: 5vw;
+  }
+
+  .contactContainer{
+    // margin-top: -5vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    font-family: $text;
+    justify-content: center;
+    .contactBlurb{
+      p{
+        margin-top:0;
+      }
+      justify-content: space-around;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      .contactIcons{
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 2em;
+        justify-content: space-between;
+        i{
+          color: $blue;
+        }
+      }
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      .form-group{
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
 }
