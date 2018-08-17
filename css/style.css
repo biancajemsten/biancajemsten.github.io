@@ -21,6 +21,9 @@ hr {
     height: 3px;
     border-style: none; }
 
+@media (max-width: 480px) {
+  hr {
+    width: 90vw; } }
 .introductionContainer {
   color: black;
   font-family: "Playfair Display", serif;
@@ -77,6 +80,17 @@ hr {
     height: 0px; }
   100% {
     height: 37px; } }
+@media (max-width: 480px) {
+  .introductionContainer {
+    top: 20vh;
+    left: 20vw;
+    height: 6rem; }
+    .introductionContainer .introTop {
+      height: 6rem; }
+      .introductionContainer .introTop p {
+        font-size: 2em; }
+    .introductionContainer .introBottom p {
+      font-size: 1rem; } }
 .homePage {
   height: 100vh;
   position: relative; }
@@ -100,6 +114,20 @@ hr {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@media (max-width: 480px) {
+  .homePage {
+    height: 100vh;
+    position: relative; }
+    .homePage hr {
+      height: 1px;
+      background-color: black; }
+    .homePage img {
+      height: 50vh;
+      bottom: 70px;
+      left: 20vw; }
+    .homePage i {
+      left: calc(50vw - 20px);
+      position: absolute; } }
 #about .aboutBlurb {
   width: 40vw;
   margin-right: 5vw;
@@ -109,6 +137,11 @@ hr {
   margin-right: 5vw;
   text-align: right; }
 
+@media (max-width: 480px) {
+  #about .aboutBlurb {
+    width: 90vw;
+    margin-right: 0;
+    align-self: center; } }
 div#nav {
   width: 15vw;
   height: 100vh;
@@ -151,6 +184,28 @@ div#nav {
     width: 0px; }
   100% {
     width: min-content; } }
+@media (max-width: 480px) {
+  div#nav {
+    width: 100vw;
+    height: 10vh;
+    z-index: 1;
+    position: fixed; }
+    div#nav ul {
+      flex-direction: row;
+      padding-left: 25px;
+      width: 80%; }
+      div#nav ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem; }
+        div#nav ul li a .navHover {
+          font-size: 1.5rem; }
+        div#nav ul li a p {
+          display: inline;
+          padding-left: 5px;
+          color: #fff; }
+    div#nav img {
+      display: none; } }
 #skills h2 {
   text-align: left;
   margin-right: 5vw; }
@@ -180,6 +235,13 @@ div#nav {
       #skills .iconContainer li img + p {
         margin-top: 0; }
 
+@media (max-width: 480px) {
+  #skills h2 {
+    text-align: left;
+    margin-left: 5vw; }
+  #skills .iconContainer {
+    width: 90vw;
+    align-self: center; } }
 #education h2 {
   text-align: right;
   margin-right: 5vw; }
@@ -510,5 +572,9 @@ div.container {
   height: 100vh;
   width: 85vw;
   right: 0; }
+
+@media (max-width: 480px) {
+  div.container {
+    width: 100vw; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -21,3 +21,9 @@ div.container{
   width: 85vw;
   right: 0;
 }
+
+@media (max-width: 480px) {
+  div.container{
+    width: 100vw;
+  }
+}

@@ -1,9 +1,7 @@
 .fullPage{
-  // height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
 }
 
 h2{
@@ -26,5 +24,11 @@ hr{
     background-color:$blue;
     height: 3px;
     border-style: none;
+  }
+}
+
+@media (max-width: 480px) {
+  hr{
+    width: 90vw;
   }
 }

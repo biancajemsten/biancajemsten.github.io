@@ -6,6 +6,8 @@ $(()=>{
   const $logo = $('.logo');
   const $experienceTitles = $('.experienceTable h6');
   const $panels = $('.panel');
+  const $navbar = $('#nav');
+
 
   //Portfolio functions
   function toggleOpen() {
@@ -37,9 +39,8 @@ $(()=>{
     });
   }
 
+
   experienceSelection();
-  console.log($('h2').offset().top);
-  console.log($aboutBlurb.offset().top + $aboutBlurb.height());
 
 
   let $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height() + 75)- ($('h2').offset().top);
@@ -49,41 +50,29 @@ $(()=>{
   //homePage functions
   $(this).on('scroll', function(){
     let scrollbarLocation = $(this).scrollTop();
-    if(scrollbarLocation > 120){
-      const $blurbHeight = $aboutBlurb.outerHeight() + $('h2').outerHeight();
-      $(window).on('resize', function(){
-        $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height() + 75)- ($('h2').offset().top);
+    if(!$.isMobile){
+      if(scrollbarLocation > 120){
+        const $blurbHeight = $aboutBlurb.outerHeight() + $('h2').outerHeight();
+        $(window).on('resize', function(){
+          $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height() + 75)- ($('h2').offset().top);
+          $profilePicture.css({
+            'height': `${$aboutBlurb.height()}px`,
+            'bottom': `-${$aboutPageHeight}px`
+          });
+        });
         $profilePicture.css({
           'height': `${$aboutBlurb.height()}px`,
-          'bottom': `-${$aboutPageHeight}px`
+          'bottom': `-${$aboutPageHeight}px`,
+          'left': '5vw'
         });
-      });
-      $profilePicture.css({
-        'height': `${$aboutBlurb.height()}px`,
-        'bottom': `-${$aboutPageHeight}px`,
-        'left': '5vw'
-      });
-    } else {
-      $profilePicture.css({
-        'height': '80vh',
-        'bottom': '0px',
-        'left': '0'
-      });
-    }
-    let contactLocation = $('#contact').offset().top - ($('#contact').height()/4);
+      } else {
+        $profilePicture.css({
+          'height': '80vh',
+          'bottom': '0px',
+          'left': '0'
+        });
+      }
 
-    if(scrollbarLocation > contactLocation){
-      $logo.css({
-        'height': '40vh',
-        'left': '15vw',
-        'bottom': '25vh'
-      });
-    }else{
-      $logo.css({
-        'height': '10vh',
-        'left': '10px',
-        'bottom': '10vh'
-      });
     }
   });
 
@@ -92,11 +81,19 @@ $(()=>{
       e.preventDefault();
       const link = $(this).attr('href');
 
-      $('html, body').animate({
-        scrollTop: $(link).offset().top
-      },800, function(){
-        window.location.id = link;
-      });
+      if($.isMobile){
+        $('html, body').animate({
+          scrollTop: $(link).offset().top - $navbar.height()
+        },800, function(){
+          window.location.id = link;
+        });
+      }else{
+        $('html, body').animate({
+          scrollTop: $(link).offset().top
+        },800, function(){
+          window.location.id = link;
+        });
+      }
     }
   });
 
@@ -104,12 +101,20 @@ $(()=>{
     if(this.hash !== ''){
       e.preventDefault();
       const link = $(this).attr('href');
+      if($.isMobile){
+        $('html, body').animate({
+          scrollTop: $(link).offset().top - $navbar.height()
+        },800, function(){
+          window.location.id = link;
+        });
+      }else{
+        $('html, body').animate({
+          scrollTop: $(link).offset().top
+        },800, function(){
+          window.location.id = link;
+        });
 
-      $('html, body').animate({
-        scrollTop: $(link).offset().top
-      },800, function(){
-        window.location.id = link;
-      });
+      }
     }
   });
 

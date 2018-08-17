@@ -9,7 +9,6 @@
     height: 80vh;
     position: absolute;
     bottom: 0px;
-    // left: 5vw;
     animation: fadeIn 3s forwards;
     transition: all 1s;
   }
@@ -18,16 +17,30 @@
     bottom: 10px;
     left: 50vw;
     position: absolute;
-    :before{
-      // height: 25px;
-      // width: 25px;
-    }
   }
 }
-
-
 
 @keyframes fadeIn {
   0%{opacity: 0;}
   100%{opacity: 1;}
+}
+
+@media (max-width: 480px) {
+  .homePage{
+    height: 100vh;
+    position: relative;
+    hr{
+      height: 1px;
+      background-color: black;
+    }
+    img{
+      height: 50vh;
+      bottom: 70px;
+      left: 20vw;
+    }
+    i{
+      left: calc(50vw - 20px);
+      position: absolute;
+    }
+  }
 }

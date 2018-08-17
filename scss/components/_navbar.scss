@@ -34,7 +34,7 @@ div#nav{
     position: absolute;
     margin-left: 10px;
     bottom: 10vh;
-    transition: 1s all; 
+    transition: 1s all;
   }
 }
 
@@ -46,4 +46,38 @@ div#nav{
 @keyframes showNavItem {
   0%{width: 0px;}
   100%{width: min-content;}
+}
+
+
+@media (max-width: 480px) {
+
+div#nav{
+  width: 100vw;
+  height: 10vh;
+  z-index: 1;
+  position: fixed;
+  ul{
+    flex-direction: row;
+    padding-left: 25px;
+    width: 80%;
+    li a{
+      text-decoration: none;
+      color: $light;
+      font-size: 1.2rem;
+      .navHover{
+        font-size: 1.5rem;
+      }
+      p{
+        display: inline;
+        padding-left: 5px;
+        color: $light;
+      }
+    }
+  }
+  img{
+    display: none;
+  }
+}
+
+
 }
