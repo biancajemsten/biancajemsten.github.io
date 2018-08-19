@@ -26,7 +26,7 @@ $(()=>{
         //   'width': '100%'
         // });
       } else $(this).parent().css({
-        'height': '165vh'
+        'height': '185vh'
       });
 
     }

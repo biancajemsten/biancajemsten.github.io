@@ -421,6 +421,14 @@ div#nav {
       .experienceContainer .experienceDetails .experienceDetail p.position {
         font-style: italic; }
 
+@media (max-width: 480px) {
+  .experienceContainer {
+    flex-direction: column; }
+    .experienceContainer .experienceTable {
+      width: auto;
+      margin-right: 0; }
+    .experienceContainer .experienceDetail {
+      margin-top: 1.1rem; } }
 #contact h2 {
   margin-left: 5vw; }
 #contact .contactContainer {
