@@ -65,10 +65,20 @@
     flex-direction: column;
     .experienceTable{
       width: auto;
-      margin-right: 0; 
+      margin-right: 0;
     }
-    .experienceDetail{
-      margin-top:1.1rem;
+    .experienceDetails{
+      .experienceDetail{
+        margin-top:1.1rem;
+        h6{
+          display: block;
+        }
+        p:first-of-type{
+          float: none;
+          display: block;
+        }
+      }
+
     }
   }
 }

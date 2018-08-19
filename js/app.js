@@ -16,15 +16,6 @@ $(()=>{
         $(this).parent().css({
           'height': '87vh'
         });
-        // $(':nth-child(2)', this).css({
-        //   'flex-wrap': 'wrap'
-        // });
-        // $('.textContainer', this).css({
-        //   'width': '100%'
-        // });
-        // $('.imageContainer', this).css({
-        //   'width': '100%'
-        // });
       } else $(this).parent().css({
         'height': '185vh'
       });
@@ -71,7 +62,7 @@ $(()=>{
   //homePage functions
   $(this).on('scroll', function(){
     let scrollbarLocation = $(this).scrollTop();
-    if(!$.isMobile){
+    if(window.innerWidth > 820){
       if(scrollbarLocation > 120){
         $(window).on('resize', function(){
           $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height() + 75)- ($('h2').offset().top);
@@ -101,7 +92,7 @@ $(()=>{
       e.preventDefault();
       const link = $(this).attr('href');
 
-      if($.isMobile){
+      if(window.innerWidth < 480){
         $('html, body').animate({
           scrollTop: $(link).offset().top - $navbar.height()
         },800, function(){
@@ -121,7 +112,7 @@ $(()=>{
     if(this.hash !== ''){
       e.preventDefault();
       const link = $(this).attr('href');
-      if($.isMobile){
+      if(window.innerWidth < 480){
         $('html, body').animate({
           scrollTop: $(link).offset().top - $navbar.height()
         },800, function(){
@@ -138,12 +129,17 @@ $(()=>{
     }
   });
 
-  $('li a').mouseenter(function(){
-    $(this).children(':nth-child(2)').text(`${$(this).attr('name')}`);
-    $(this).children(':nth-child(2)').addClass('showNavItem');
-  });
-  $('li a').mouseleave(function(){
-    $(this).children(':nth-child(2)').text('');
-  });
+  function navbarResponsive(){
+    if(!$.isMobile){
+      $('li a').mouseenter(function(){
+        $(this).children(':nth-child(2)').text(`${$(this).attr('name')}`);
+        $(this).children(':nth-child(2)').addClass('showNavItem');
+      });
+      $('li a').mouseleave(function(){
+        $(this).children(':nth-child(2)').text('');
+      });
+    }
+  }
+  navbarResponsive();
 
 });

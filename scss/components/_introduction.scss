@@ -66,6 +66,33 @@ $introBottomHeight: 3rem;
   100%{height: 37px;}
 }
 
+
+
+@media (max-width: 950px){
+  .introductionContainer{
+    left: 40vw;
+    height: 8rem;
+    .introTop{
+      height: 7rem;
+        p{
+          font-size: 2.5em;
+        }
+    }
+    .introBottom{
+      p{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px){
+  .introductionContainer{
+    top: 0;
+    left: 10vw;
+  }
+}
+
 @media (max-width: 480px) {
   .introductionContainer{
     top: 20vh;
@@ -73,9 +100,9 @@ $introBottomHeight: 3rem;
     height: 6rem;
     .introTop{
       height: 6rem;
-        p{
-          font-size: 2em;
-        }
+      p{
+        font-size: 2em;
+      }
     }
     .introBottom{
       p{
