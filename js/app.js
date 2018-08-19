@@ -3,7 +3,6 @@ console.log('js running');
 $(()=>{
   const $profilePicture = $('#profilePicture');
   const $aboutBlurb = $('.aboutBlurb');
-  const $logo = $('.logo');
   const $experienceTitles = $('.experienceTable h6');
   const $panels = $('.panel');
   const $navbar = $('#nav');
@@ -11,7 +10,29 @@ $(()=>{
 
   //Portfolio functions
   function toggleOpen() {
+
+    if($.isMobile){
+      if(this.classList.contains('open')) {
+        $(this).parent().css({
+          'height': '87vh'
+        });
+        // $(':nth-child(2)', this).css({
+        //   'flex-wrap': 'wrap'
+        // });
+        // $('.textContainer', this).css({
+        //   'width': '100%'
+        // });
+        // $('.imageContainer', this).css({
+        //   'width': '100%'
+        // });
+      } else $(this).parent().css({
+        'height': '165vh'
+      });
+
+    }
+
     this.classList.contains('open') ? this.classList.remove('open') :  $panels.removeClass('open') && this.classList.add('open');
+
   }
 
   function toggleActive() {
@@ -52,7 +73,6 @@ $(()=>{
     let scrollbarLocation = $(this).scrollTop();
     if(!$.isMobile){
       if(scrollbarLocation > 120){
-        const $blurbHeight = $aboutBlurb.outerHeight() + $('h2').outerHeight();
         $(window).on('resize', function(){
           $aboutPageHeight = ($aboutBlurb.offset().top + $aboutBlurb.height() + 75)- ($('h2').offset().top);
           $profilePicture.css({

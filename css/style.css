@@ -563,6 +563,36 @@ div#nav {
       margin: 0 auto;
       position: relative; }
 
+@media (max-width: 480px) {
+  #portfolio .projectBlurb {
+    width: 80vw;
+    flex-direction: column; }
+  #portfolio .portfolioPanels .panel:hover {
+    background: -moz-linear-gradient(left, #ffffff 0%, #c2d1f0 43%, #c2d1f0 58%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #c2d1f0 43%, #c2d1f0 58%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #c2d1f0 43%, #c2d1f0 58%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 );
+    /* IE6-9 */
+    color: #000; }
+  #portfolio .portfolioPanels .panel .projectInfo .textContainer {
+    width: 100%; }
+  #portfolio .portfolioPanels .panel .projectInfo .imageContainer {
+    width: 100%; }
+  #portfolio .portfolioPanels .panel.open-active {
+    color: #000;
+    background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 43%, #ffffff 58%, #ffffff 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 43%, #ffffff 58%, #ffffff 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 43%, #ffffff 58%, #ffffff 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+    #portfolio .portfolioPanels .panel.open-active h3 {
+      font-size: 1.17em;
+      margin: 0 auto;
+      position: relative; } }
 html {
   background-color: #fff;
   font-family: "Playfair Display", serif; }
