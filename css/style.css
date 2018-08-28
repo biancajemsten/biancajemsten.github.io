@@ -495,6 +495,10 @@ div#nav {
   font-family: "Lato", sans-serif;
   display: flex;
   justify-content: space-around; }
+  #portfolio .projectBlurb p:first-of-type {
+    margin-right: 5px; }
+  #portfolio .projectBlurb p:last-of-type {
+    margin-left: 5px; }
 #portfolio .portfolioPanels {
   display: flex;
   flex-wrap: wrap;

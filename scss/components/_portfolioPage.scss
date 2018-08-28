@@ -10,6 +10,12 @@
     font-family: $text;
     display: flex;
     justify-content: space-around;
+    p:first-of-type{
+      margin-right: 5px;
+    }
+    p:last-of-type{
+      margin-left: 5px; 
+    }
   }
   .portfolioPanels{
     display: flex;
@@ -149,7 +155,7 @@
             width: 100%;
           }
           .imageContainer{
-            width: 100%; 
+            width: 100%;
           }
         }
       }
